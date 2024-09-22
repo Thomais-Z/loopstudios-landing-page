@@ -1,0 +1,598 @@
+:root {
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+  --dark-gray: hsl(0, 0%, 55%);
+  --very-dark-gray: hsl(0, 0%, 41%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Alata', sans-serif;
+  overflow-x: hidden;
+}
+
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/images/desktop/image-hero.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 3rem 7rem 6rem 7rem;
+}
+
+main {
+  padding: 7rem;
+}
+
+footer {
+  background-color: var(--black);
+  padding: 3rem 7rem 0 7rem;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}
+
+.overlay {
+  background-image: linear-gradient(rgba(0, 0, 0), rgba(0, 0, 0));
+
+  transition: all 0.3s ease-in-out;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.nav-btn {
+  font-size: 14px;
+  color: var(--white);
+  text-decoration: none;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.nav-btn::after {
+  content: '';
+  display: block;
+  margin: 0 auto;
+  width: 20px;
+  padding-top: 10px;
+  border-bottom: 2px solid var(--white);
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.nav-btn:hover:after {
+  opacity: 1;
+}
+
+.hamburger,
+.close {
+  display: none;
+  position: absolute;
+  top: 3.3rem;
+  right: 4rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.h1-title {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 56px;
+  color: var(--white);
+  width: 500px;
+  font-weight: 300;
+  text-transform: uppercase;
+  line-height: 1.1;
+  padding: 2rem;
+  border: 2px solid var(--white);
+  transition: all 0.3s;
+}
+
+/* INFO SECTION */
+.info-section {
+  position: relative;
+  padding-bottom: 8rem;
+}
+
+.info-img {
+  width: 55vw;
+}
+
+.info-box {
+  padding: 6rem;
+  width: 700px;
+  position: absolute;
+  top: 200px;
+  right: -70px;
+  background-color: var(--white);
+}
+
+.info-h2 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 56px;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.info-p {
+  color: var(--dark-gray);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* CREATION SECTION */
+.creations-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5rem;
+}
+
+.creations-h2 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 44px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.see-all-btn {
+  text-decoration: none;
+  font-family: inherit;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 0.7rem 2rem;
+  font-size: 14px;
+  border: 1px solid var(--black);
+  color: var(--black);
+  letter-spacing: 4px;
+}
+
+.see-all-btn:hover {
+  background-color: var(--black);
+  color: var(--white);
+  transition: all 0.3s;
+}
+
+.creations-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 2.5rem;
+  height: 1100px;
+}
+
+.creations-grid-box {
+  position: relative;
+}
+
+.creations-grid-box img {
+  width: 280px;
+  filter: brightness(75%);
+}
+
+.creations-h3 {
+  color: var(--white);
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  font-size: 32px;
+  width: 180px;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+}
+
+.box {
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-right: 2rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.box:hover .creations-h3 {
+  color: var(--black);
+  font-weight: bold;
+}
+
+.box1 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/images/desktop/image-deep-earth.jpg);
+}
+
+.box1:hover {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url(/images/desktop/image-deep-earth.jpg);
+}
+
+.box2 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/images/desktop/image-night-arcade.jpg);
+}
+
+.box2:hover {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url(/images/desktop/image-night-arcade.jpg);
+}
+
+.box3 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/images/desktop/image-soccer-team.jpg);
+}
+
+.box3:hover {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url(/images/desktop/image-soccer-team.jpg);
+}
+
+.box4 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/images/desktop/image-grid.jpg);
+}
+
+.box4:hover {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url(/images/desktop/image-grid.jpg);
+}
+
+.box5 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/images/desktop/image-from-above.jpg);
+}
+
+.box5:hover {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url(/images/desktop/image-from-above.jpg);
+}
+
+.box6 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/images/desktop/image-pocket-borealis.jpg);
+}
+
+.box6:hover {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url(/images/desktop/image-pocket-borealis.jpg);
+}
+
+.box7 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/images/desktop/image-curiosity.jpg);
+}
+
+.box7:hover {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url(/images/desktop/image-curiosity.jpg);
+}
+
+.box8 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/images/desktop/image-fisheye.jpg);
+}
+
+.box8:hover {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url(/images/desktop/image-fisheye.jpg);
+}
+
+/* FOOTER */
+.footer-nav {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.footer-nav-2 {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+.footer-nav-btns {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 3rem;
+}
+
+.copyrights {
+  color: var(--dark-gray);
+  font-size: 14px;
+}
+
+.attribution {
+  font-size: 14px;
+  text-align: center;
+  color: var(--dark-gray);
+  font-family: 'Josefin Sans', sans-serif;
+  padding-bottom: 1rem;
+}
+
+.attribution a {
+  color: var(--dark-gray);
+  font-family: inherit;
+  text-decoration: none;
+}
+
+@media (max-width: 1350px) {
+  .info-img {
+    width: 50vw;
+  }
+
+  .info-box {
+    padding: 5rem;
+    width: 570px;
+    position: absolute;
+    top: 25vh;
+    left: 38vw;
+    background-color: var(--white);
+  }
+
+  .info-h2 {
+    font-size: 34px;
+  }
+
+  .info-p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1150px) {
+  main {
+    padding: 6rem;
+  }
+
+  header {
+    padding: 3rem 6rem 6rem 6rem;
+  }
+
+  footer {
+    padding: 3rem 6rem 0 6rem;
+  }
+
+  .info-img {
+    width: 50vw;
+  }
+
+  .info-box {
+    padding: 4rem 4rem 1rem 4rem;
+    width: 508px;
+    position: absolute;
+    top: 150px;
+    left: 38vw;
+    background-color: var(--white);
+  }
+
+  .info-h2 {
+    font-size: 30px;
+  }
+
+  .info-p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 1000px) {
+  main {
+    padding: 4rem;
+  }
+
+  header {
+    padding: 3rem 4rem 6rem 4rem;
+  }
+
+  footer {
+    padding: 3rem 4rem 0 4rem;
+  }
+
+  .info-img {
+    width: 50vw;
+  }
+
+  .info-box {
+    padding: 4rem 4rem 1rem 4rem;
+    width: 508px;
+    position: absolute;
+    top: 110px;
+    left: 38vw;
+    background-color: var(--white);
+  }
+
+  .info-h2 {
+    font-size: 30px;
+  }
+
+  .info-p {
+    font-size: 13px;
+  }
+
+  .creations-grid {
+    row-gap: 1rem;
+  }
+
+  .box {
+    margin-right: 1rem;
+  }
+
+  .creations-h3 {
+    font-size: 24px;
+    width: 140px;
+    left: 1rem;
+  }
+}
+
+@media (max-width: 950px) {
+  main {
+    padding: 2rem;
+  }
+
+  footer {
+    position: relative;
+    padding: 3rem 7rem 3rem 7rem;
+  }
+
+  .h1-title {
+    text-align: left;
+    width: 450px;
+    margin: 0 auto;
+  }
+
+  .info-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .info-box {
+    position: relative;
+    top: 0;
+    left: 0;
+    text-align: center;
+  }
+
+  .info-h2 {
+    font-size: 40px;
+  }
+
+  .info-p {
+    font-size: 14px;
+  }
+
+  .creations {
+    margin-bottom: 9rem;
+    position: relative;
+  }
+
+  .creations-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, 1fr);
+    row-gap: 1rem;
+    width: 50vw;
+    margin: 0 auto;
+    height: 1400px;
+  }
+
+  .see-all-btn {
+    position: absolute;
+    bottom: -5rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .creations-h2 {
+    margin: 0 auto;
+  }
+
+  .creations-h3 {
+    font-size: 30px;
+    left: 1.5rem;
+    bottom: 1.5rem;
+    width: 160px;
+  }
+
+  .footer-title {
+    margin: 0 auto;
+  }
+
+  .footer-nav-2 {
+    align-items: center;
+    margin-bottom: 8rem;
+  }
+
+  .footer-nav-btns {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .social {
+    position: absolute;
+    bottom: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .copyrights {
+    position: absolute;
+    bottom: 3.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .attribution {
+    margin-bottom: -3rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .main-header .nav-btn {
+    font-size: 32px;
+    font-family: 'Josefin Sans', sans-serif;
+    line-height: 1.4;
+    text-transform: uppercase;
+  }
+
+  .main-header .nav-btn::after {
+    margin: 3px 35px;
+    width: 60px;
+    padding-top: 0px;
+    border-bottom: 2px solid var(--white);
+    opacity: 0;
+    transition: all 0.3s;
+  }
+}
